@@ -10,6 +10,7 @@ Uma análise descritiva de uma Campanha de Marketing com métricas e resultados.
 DataScienceAcademy
 
 # Insights
+ **Resultado Campanhas:**
 - 20% de taxa de conversão 
  - Solteiros compraram após a campanha em +36% que os casados e divorciados
  - Clientes Residentes nos EUA compraram +8% do que todos os outros 6 países juntos
