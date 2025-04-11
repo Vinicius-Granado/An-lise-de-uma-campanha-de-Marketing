@@ -22,3 +22,18 @@ DataScienceAcademy
 - Solteiros gastaram +29% em relação aos gastos somados de clientes casados e divorciados
 -  Os gastos com Eletrônicos de 607K são 1,78 % maior que todos os outros somados, enquanto clientes residentes dos EUA são responsáveis por 303K equivalentes a 49% desses gastos.
 - Clientes na faixa dos 55 anos são os que mais gastaram com 48K, enquanto os clientes com 66 anos são os que menos gastaram  
+
+# Medidas Utilizadas:
+
+ --Coluna Calculada--
+Comprou = SWITCH(FALSE(),
+DadosMarketing[Compra na Campanha 1] = 0,"Sim",
+DadosMarketing[Compra na Campanha 2] = 0,"Sim",
+DadosMarketing[Compra na Campanha 3] = 0,"Sim",
+DadosMarketing[Compra na Campanha 4] = 0,"Sim",
+DadosMarketing[Compra na Campanha 5] = 0,"Sim",
+"Não"
+)
+
+--Usado para calcular o percentual de clientes nos EUA--
+USA = CALCULATE(COUNT(DadosMarketing[ID]),DadosMarketing[Pais] = "Estados Unidos")/ COUNT(DadosMarketing[ID])* 100
